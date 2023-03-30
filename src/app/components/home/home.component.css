@@ -1,0 +1,114 @@
+/* .seccionForm {
+    background-color: #e5e5f7;
+    opacity: 0.6;
+    background-image: linear-gradient(135deg, #2419e3 25%, transparent 25%), linear-gradient(225deg, #2419e3 25%, transparent 25%), linear-gradient(45deg, #2419e3 25%, transparent 25%), linear-gradient(315deg, #2419e3 25%, #e5e5f7 25%);
+    background-position: 40px 0, 40px 0, 0 0, 0 0;
+    background-size: 40px 40px;
+    background-repeat: repeat;
+    display: flex;
+    min-height: 100vh;
+} */
+
+.seccionForm {
+    margin-top: 1rem;
+
+}
+
+.formularioLogin {
+    background-color: var(--colorBlancoRelax);
+    margin: auto;
+    width: 90%;
+    max-width: 40rem;
+    padding: 2rem;
+    border-radius: var(--redondeo);
+    box-shadow: 1px 1px 1.5rem -5px var(--colorNegro);
+    text-align: center;
+}
+
+/* .formularioLogin__titulo {} */
+
+.form__paragraph {
+    color: var(--colorNegroRelax);
+}
+
+.form__link {
+    color: var(--colorNegroRelax);
+    font-weight: bold;
+}
+
+.formularioLogin__contenedor {
+    margin-top: var(--separacion);
+    display: grid;
+    gap: 4rem;
+}
+
+/* contenedor de inputs */
+.formularioLogin__group {
+    position: relative;
+}
+
+.form__input {
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    padding: .5rem;
+    border-bottom: 2px solid var(--colorAzul2);
+    font-family: var(--font_sec);
+    font-size: 2.4rem;
+}
+
+.form__input:focus+.form__label,
+.form__input:not(:placeholder-shown)+.form__label {
+    transform: translateY(-2rem) scale(.7);
+    transform-origin: left top;
+}
+
+.form__label {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    transform: translateY(1rem);
+    transition: transform, color var(--d);
+    color: var(--colorAzul1);
+
+    font-size: 2rem;
+}
+
+.form__line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--colorAzul1);
+    transform: scale(0);
+    transform: left bottom;
+    transition: var(--d);
+}
+
+.form__input:focus~.form__line,
+.form__input:not(:placeholder-shown)~.form__line {
+    transform: scale(1);
+}
+
+.form__submit {
+    margin-top: var(--separacion);
+    background-color: var(--colorAzul1);
+    border: none;
+    cursor: pointer;
+    border-radius: var(--redondeo);
+    color: var(--colorBlanco);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: .5rem;
+}
+
+.form__submit:hover {
+    box-shadow: 1px 1px 1.5rem -5px var(--colorNegro);
+}
+
+.mensaje {
+    text-align: center;
+}

@@ -1,0 +1,11 @@
+.navbar {
+    color: var(--colorBlancoRelax);
+}
+
+.navbar-nav a {
+    text-transform: uppercase;
+}
+
+.navbar-brand {
+    color: var(--colorBlancoRelax);
+}

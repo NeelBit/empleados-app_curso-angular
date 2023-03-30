@@ -1,0 +1,59 @@
+<section class="contenedor seccionForm">
+
+    <form action="" method="post" class="formularioLogin">
+
+        <div class="formularioLogin__contenedor">
+
+            <div class="formularioLogin__group">
+                <input type="text" name="nombre" id="nombre" class="form__input" placeholder=" " required #nombre [(ngModel)]="cuadroNombre">
+                <label for="nombre" class="form__label">Nombre:</label>
+                <span class="form__line"></span>
+            </div>
+
+            <div class="formularioLogin__group">
+                <input type="text" name="apellido" id="apellido" class="form__input" placeholder=" " required #apellido [(ngModel)]="cuadroApellido">
+                <label for="apellido" class="form__label">Apellido:</label>
+                <span class="form__line"></span>
+            </div>
+
+            <div class="formularioLogin__group">
+                <input type="text" name="cargo" id="cargo" class="form__input" placeholder=" " required #cargo [(ngModel)]="cuadroCargo">
+                <label for="cargo" class="form__label">Cargo:</label>
+                <span class="form__line"></span>
+            </div>
+
+            <div class="formularioLogin__group">
+                <input type="number" min="0" name="salario" id="salario" class="form__input" placeholder=" " required #salario [(ngModel)]="cuadroSalario">
+                <label for="salario" class="form__label">Salario:</label>
+                <span class="form__line"></span>
+            </div>
+
+
+            <!-- botones -->
+
+            <!-- comprobar si clickeo en nombre o algun boton -->
+            <ng-container *ngIf="accion == 1 || accion == 2; else elseTemplate">
+
+                <input type="submit" value="Completar acción" class="form__submit" (click)="completarAccion()">
+
+            </ng-container>
+            <ng-template #elseTemplate>
+
+                <input type="submit" value="Actualizar" class="form__submit" (click)="actualizar()">
+                <a class="btn btn-outline-danger btn__eliminar" (click)="eliminarEmpleado()">Eliminar</a>
+
+            </ng-template>
+
+
+            <!-- <input type="submit" value="Completar acción" class="form__submit" (click)="completarAccion()"> -->
+
+
+        </div>
+
+    </form>
+
+    <div class="col-12 center">
+        <button class="col g-0 text-center border btn btn-primary" (click)="volverHome()">Volver a home</button>
+    </div>
+
+</section>

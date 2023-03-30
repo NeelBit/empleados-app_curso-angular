@@ -1,0 +1,6 @@
+{
+  "rules": {
+    ".read": "auth!=null",  // 2022-10-29 // true
+    ".write": "auth!=null",  // 2022-10-29 now < 1667012400000 // true
+  }
+}

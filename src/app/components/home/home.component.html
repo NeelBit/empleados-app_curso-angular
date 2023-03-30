@@ -1,0 +1,54 @@
+<section class="seccionForm contenedor">
+    <form action="" method="post" class="formularioLogin">
+
+        <h2 class="formularioLogin__titulo">{{ title }}</h2>
+
+        <div class="formularioLogin__contenedor">
+
+            <div class="formularioLogin__group">
+                <input type="text" name="nombre" id="nombre" class="form__input" placeholder=" " required #nombre [(ngModel)]="cuadroNombre">
+                <label for="nombre" class="form__label">Nombre:</label>
+                <span class="form__line"></span>
+            </div>
+
+            <div class="formularioLogin__group">
+                <input type="text" name="apellido" id="apellido" class="form__input" placeholder=" " required #apellido [(ngModel)]="cuadroApellido">
+                <label for="apellido" class="form__label">Apellido:</label>
+                <span class="form__line"></span>
+            </div>
+
+            <div class="formularioLogin__group">
+                <input type="text" name="cargo" id="cargo" class="form__input" placeholder=" " required #cargo [(ngModel)]="cuadroCargo">
+                <label for="cargo" class="form__label">Cargo:</label>
+                <span class="form__line"></span>
+            </div>
+
+            <div class="formularioLogin__group">
+                <input type="number" min="0" name="salario" id="salario" class="form__input" placeholder=" " required #salario [(ngModel)]="cuadroSalario">
+                <label for="salario" class="form__label">Salario:</label>
+                <span class="form__line"></span>
+            </div>
+
+            <!-- <div class="formularioLogin__group">
+                <input type="email" name="email" id="email" class="form__input" placeholder=" " #email>
+                <label for="email" class="form__label">Email:</label>
+                <span class="form__line"></span>
+            </div> -->
+
+            <!-- <div class="formularioLogin__group">
+                <input type="password" name="pass" id="pass" class="form__input" placeholder=" " #password>
+                <label for="pass" class="form__label">Contraseña:</label>
+                <span class="form__line"></span>
+            </div> -->
+
+            <!-- <input type="submit" value="Registrarse" class="form__submit" (click)="guardarEmp(nombre.value, apellido.value, cargo.value, salario.value)"> -->
+            <input type="submit" value="Registrarse" class="form__submit" (click)="guardarEmpl2()">
+
+        </div>
+
+    </form>
+
+</section>
+
+<!-- dar nombre identificativo a emp y a i -->
+<app-lista-empleados-hijo *ngFor="let emp of empleados; index as i" [empleadoDeLista]="emp" [indice]="i" [empleadosLista]="empleados" [cuadroNombre]="cuadroNombre" [cuadroApellido]="cuadroApellido" [cuadroCargo]="cuadroCargo" [cuadroSalario]="cuadroSalario"></app-lista-empleados-hijo>

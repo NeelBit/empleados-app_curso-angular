@@ -1,0 +1,24 @@
+.listaEmpleados {
+    margin-top: 1rem;
+
+    border: 1px black solid;
+}
+
+.list-group:hover {
+    box-shadow: 1px 1px 1.5rem -5px var(--colorNegro);
+}
+
+.spanTextoLi {
+    cursor: pointer;
+}
+
+.list-group__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.list-group__btn a {
+    width: 6rem;
+}

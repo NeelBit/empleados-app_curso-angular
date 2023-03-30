@@ -1,0 +1,13 @@
+.notFound {
+    margin: 0 auto;
+    display: grid;
+    place-content: center;
+}
+
+.notFound img {
+    margin: 0 auto;
+}
+
+.notFound p {
+    text-align: center;
+}
